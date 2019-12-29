@@ -165,7 +165,7 @@ else
   if [[ ${arduino_arch} == "esp8266" ]]; then
     FLASH_INSERT="--pref build.flash_ld=$arduino_flash_ld"
   fi
-  CMD="/opt/arduino/arduino --verify --verbose-build $FLASH_INSERT --pref build.path=/opt/workspace/build --pref build.f_cpu=$arduino_f_cpu --pref build.flash_size=$arduino_flash_size --pref build.flash_ld=${arduino_flash_ld} --board $BOARD $INO_FILE"
+  CMD="/opt/arduino/arduino --verify --verbose-build $FLASH_INSERT --pref build.path=/opt/workspace/build --pref build.f_cpu=$arduino_f_cpu --pref build.flash_size=$arduino_flash_size --board $BOARD $INO_FILE"
   echo "Build command: ${CMD}"
   $(${CMD})
 fi
